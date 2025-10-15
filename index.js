@@ -1,3 +1,7 @@
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 /*
 
 <div id="parent"> 
@@ -20,4 +24,4 @@ console.log(parent);
 const root= ReactDOM.createRoot(document.getElementById("root"));
 
 // render method will convert the object into html that the browser understand
-root.render(parent);
+root.render(parent);    
