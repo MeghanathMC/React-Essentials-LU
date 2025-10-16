@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -14,14 +13,30 @@ import ReactDOM from "react-dom/client";
 
 // const heading = React.createElement("h1",{id:"heading"},"Hello from react");
 
-
-const parent = React.createElement("div",{id:"parent"}, React.createElement("div",{id:"children"}, [React.createElement("h1",{id:"heading1"}, "Heading 1"), React.createElement("h2",{id:"heading2"},"Heading 2")]));
+// const parent = React.createElement("div",{id:"parent"}, React.createElement("div",{id:"children"}, [React.createElement("h1",{id:"heading1"}, "Heading 1"), React.createElement("h2",{id:"heading2"},"Heading 2")]));
 
 // React.createElement creates the object (it has type, and props called (attributes,children))
-console.log(parent); 
+// console.log(parent);
 
+const title = <h3>Hello Title</h3>;
 
-const root= ReactDOM.createRoot(document.getElementById("root"));
+const Paragraph = () => (
+  <>
+    <p>this is paragraph using function callinfg</p>
+    <span>this is span tag</span>
+  </>
+);
+
+const Heading = () => {
+  return (
+    <>
+      <h1>Heading 1</h1>
+      <Paragraph />
+    </>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // render method will convert the object into html that the browser understand
-root.render(parent);    
+root.render(<Heading />);
