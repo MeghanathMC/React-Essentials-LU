@@ -1,13 +1,11 @@
+import { LOGO_URL } from "../utils/constants.js";
 const Header = () => {
   return (
     <div className="header">
       {/* logo */}
 
       <div className="logo">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThCagRLYkLeTBEd0qc-6FLb6lnyxJXaBw_Fw&s"
-          height={60}
-        />
+        <img src={LOGO_URL} height={60} />
       </div>
 
       {/* nav items */}
@@ -39,6 +37,5 @@ const Header = () => {
     </div>
   );
 };
-
 
 export default Header;

@@ -71,21 +71,20 @@ body {
   border-radius: 10px;
 }
 
-.search button {
+.search-btn,
+.filter-btn {
   margin: 12px;
   height: 50px;
-  width: 70px;
   border-radius: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   cursor: pointer;
 }
 
-.search button:hover {
+.search-btn:hover {
   background-color: rgb(243, 155, 92);
   border: 1px solid black;
 }
-
 .restro-container {
   display: flex;
   flex-wrap: wrap;
@@ -108,4 +107,97 @@ body {
 .res-logo img {
   width: 300px;
   height: 200px;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.shimmer-card {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.shimmer-img {
+  width: 100%;
+  height: 200px;
+  background: #e0e0e0;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-info {
+  padding: 1rem;
+}
+
+.shimmer-line {
+  height: 14px;
+  background: #e0e0e0;
+  margin: 0.6rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmer-title {
+  width: 70%;
+  height: 16px;
+}
+.shimmer-subtitle {
+  width: 50%;
+  height: 14px;
+}
+.shimmer-text {
+  width: 90%;
+  height: 12px;
+}
+
+/* Shimmer animation */
+.shimmer-line::after,
+.shimmer-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Gentle pulse effect on whole card */
+@keyframes pulse {
+  0% {
+    background-color: #f4f4f4;
+  }
+  50% {
+    background-color: #ededed;
+  }
+  100% {
+    background-color: #f4f4f4;
+  }
 }
