@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { LOGO_URL } from "../utils/constants.js";
 const Header = () => {
+  const [btnPressed, setBtnPressed] = useState("Login");
+
+  console.log("whole header rendered");
   return (
     <div className="header">
       {/* logo */}
@@ -29,6 +33,19 @@ const Header = () => {
             <a href="">Your cart</a>
           </li>
         </ul>
+      </div>
+
+      <div className="login-btn-container">
+        <button
+          className="login-btn"
+          onClick={() => {
+            btnPressed === "Login"
+              ? setBtnPressed("Logout")
+              : setBtnPressed("Login");
+          }}
+        >
+          {btnPressed}
+        </button>
       </div>
 
       <div className="profile">

@@ -201,3 +201,13 @@ body {
     background-color: #f4f4f4;
   }
 }
+
+.login-btn-container {
+  margin: 0 20px;
+}
+.login-btn {
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  border-radius: 10px;
+}
